@@ -1,0 +1,49 @@
+<% layout('/layouts/boilerplate')-%>
+
+    <body>
+
+        <div class="row mt-3">
+            <div class="col-8 offset-2">
+                <br>
+                <h3>Edit the list</h3>
+                <br>
+                <div class="mb-3"></div>
+                <form action="/listing/<%=list._id%>?_method=PUT" method="post" novalidation class="needs-validation">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input name="title" type="text" value="<%=list.title%>" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="descrption" id="" class="form-control"><%=list.description%></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">IMG</label>
+                        <input type="text" name="image" value="<%=list.image%>" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="number" name="price" id="" value="<%=list.price%>" class="form-control">
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" name="country" value="<%=list.country%>" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" name="locaton" value="<%=list.location%>" class="form-control">
+                    </div>
+
+
+                    <br>
+                    <button class="btn btn-dark edit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>

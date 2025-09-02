@@ -1,0 +1,31 @@
+<% layout('/layouts/boilerplate')-%>
+
+    <body>
+        <h3>All Listings</h3>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1" id="containerDiv">
+            <%for(let listing of allListings){%>
+                <a href="/listing/<%=listing._id%>" class="listing-link">
+                    <div class="card col">
+                        <img src="<%=listing.image.url%>" class="card-img-top" alt="..." style="height:18rem">
+                        <!-- yaha card overley from bootstrap -->
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>
+                                    <%= listing.title %>
+                                </b>
+                                <br>
+                                &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <%}%>
+        </div>
+        <!-- <ul>
+        <%for(let listing of allListings){%>
+            <li><a href="/listing/<%= listing._id%>"><%= listing.title %></a></li>
+            <%}%>
+        </ul> -->
+        <!-- <a href="/listing/new">Create new list</a> -->
+
+    </body>

@@ -1,0 +1,48 @@
+<% layout('/layouts/boilerplate')-%>
+
+    <body>
+        
+        <div class="row">
+            <div class="col-8 offset-2">
+                <br><br>
+                <h3>Create new list</h3>
+                <br>
+        <form action="/listing" method="post" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label for="listing[title]" class="form-label">Title</label>
+            <input name="listing[title]" type="text" placeholder="title" class="form-control" required>
+            <div class="invalid-feedback">Give your place a name travelers will remember</div>
+            </div>
+            <div class="mb-3">
+                <label for="listing[description]" class="form-label">Description</label>
+                <textarea name="listing[description]" id=""  class="form-control" required></textarea>
+                <div class="invalid-feedback">Guests want to know more—expand your description</div>
+            </div>
+            <div class="mb-3">
+                <label for="listing[image]" class="form-label">IMG</label>
+                <input type="text" name="listing[image]" placeholder="enter url of image" class="form-control" value="https://unsplash.com/photos/brown-and-black-wooden-house-TiVPTYCG_3E">
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                <label for="listing[price]" class="form-label">Price</label>
+                <input  name="listing[price]" id="" placeholder="1200" class="form-control" required>
+                <div class="invalid-feedback">Price must be a number—no symbols or text</div>
+            </div>
+
+              <div class="mb-3 col-md-8">
+                <label for="listing[country]" class="form-label">Country</label>
+                <input type="text" name="listing[country]" placeholder="India" class="form-control">
+            </div>
+            </div>
+            <div class="mb-3">
+                <label for="listing[location]" class="form-label">Location</label>
+                <input type="text" name="listing[location]" placeholder="Jaipur,Rajasthan" class="form-control">
+            </div>
+          
+            <br>
+            <button class="btn btn-dark add-btn">Add</button>
+            </div>
+        </form>
+        </div>
+        </div>
+    </body>
